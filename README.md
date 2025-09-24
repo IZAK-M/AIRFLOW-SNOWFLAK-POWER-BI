@@ -1,6 +1,6 @@
 # Pipeline ETL : Traiterment des données en temps réel
 
-## 🚍 Projet ETL GTFS – Métropole de Nice / Lignes d’Azur
+## <span style=color:yellow> 🚍 Projet ETL GTFS – Métropole de Nice / Lignes d’Azur
 
 Ce projet vise à construire un pipeline ETL pour exploiter les données de transport en open data (GTFS / GTFS-RT) fournies par la métropole de Nice et Lignes d’Azur. Il permet :
 
@@ -15,6 +15,16 @@ Des tableaux de bord analytiques illustrent les usages possibles pour la visuali
 ## Pipeline ELT (vue d’ensemble)
 
 ![ELT](https://github.com/IZAK-M/AIRFLOW-SNOWFLAK-POWER-BI/blob/main/images/ELT.png)
+
+## 🛠️ Stack technique
+
+ - **Apache Airflow** : orchestration des workflows ETL via des DAGs modulaires et maintenables
+
+ - **Snowflake** : entrepôt de données cloud pour le stockage, la transformation et l’analyse des données
+
+ - **Docker Compose** : environnement local reproductible pour le déploiement d’Airflow et de ses services associés
+
+ - **Python** : scripts d’ingestion, parsing des flux Protobuf (GTFS-RT), et transformation des données au format CSV
 
 ## Dépendances principales
 

@@ -1,6 +1,6 @@
 # Pipeline ETL : Traiterment des données en temps réel
 
-## <span style=color:yellow> 🚍 Projet ETL GTFS – Métropole de Nice / Lignes d’Azur
+##  🚍 Projet ETL GTFS – Métropole de Nice / Lignes d’Azur
 
 Ce projet vise à construire un pipeline ETL pour exploiter les données de transport en open data (GTFS / GTFS-RT) fournies par la métropole de Nice et Lignes d’Azur. Il permet :
 
@@ -15,6 +15,13 @@ Des tableaux de bord analytiques illustrent les usages possibles pour la visuali
 ## Pipeline ELT (vue d’ensemble)
 
 ![ELT](https://github.com/IZAK-M/AIRFLOW-SNOWFLAK-POWER-BI/blob/main/images/ELT.png)
+
+#### Le pipeline suit l’architecture MEDALLION :
+- *Bronze* : Ingestion brute des GTFS static et realtime, avec horodatage et source.
+
+- *Silver* : Normalisation des horaires, jointures entre trips/routes/stops, gestion des fuseaux horaires.
+
+- *Gold* : KPIs comme ponctualité, fréquence, temps d’attente, par ligne/jour/heure, prêts pour Power BI.
 
 ## 🛠️ Stack technique
 
